@@ -288,8 +288,14 @@ function getFibonacciNumber(index) {
  *   10 => 55 // (1+2+3+...+10)
  *   1  => 1
  */
-function getSumToN(/* n */) {
-  throw new Error('Not implemented');
+function getSumToN(n) {
+  let i = 1;
+  let sum = 0;
+  while (i <= n) {
+    sum += i;
+    i += 1;
+  }
+  return sum;
 }
 
 /**
@@ -303,8 +309,15 @@ function getSumToN(/* n */) {
  *   202 => 4  // (2+0+2)
  *   5   => 5  // 5
  */
-function getSumOfDigits(/* num */) {
-  throw new Error('Not implemented');
+function getSumOfDigits(num) {
+  const str = num.toString();
+  let i = 0;
+  let sum = 0;
+  while (i < str.length) {
+    sum += +str[i];
+    i += 1;
+  }
+  return sum;
 }
 
 /**
@@ -318,8 +331,11 @@ function getSumOfDigits(/* num */) {
  *   16  => true
  *   15  => false
  */
-function isPowerOfTwo(/* num */) {
-  throw new Error('Not implemented');
+function isPowerOfTwo(num) {
+  if (Math.log2(num) === Math.round(Math.log2(num))) {
+    return true;
+  }
+  return false;
 }
 
 /**
